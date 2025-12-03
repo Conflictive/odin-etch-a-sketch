@@ -1,0 +1,18 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#grid-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    
+    align-content: flex-start; 
+}
+    
+.grid-div{
+    width: 6.25%;
+    height: 6.25%;
+}
