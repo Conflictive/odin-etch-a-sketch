@@ -1,6 +1,7 @@
 
 // --- DOM ELEMENTS ---
 const gridContainer = document.querySelector("#grid-container");
+const resetBtn = document.querySelector("button");
 
 
 for(let i = 0; i < 16; i++){
@@ -16,3 +17,11 @@ for(let i = 0; i < 16; i++){
         
     }
 }
+
+resetBtn.addEventListener("click", () => {
+    const divs = document.querySelectorAll(".grid-div");
+    
+    divs.forEach((div) => {
+        div.style.backgroundColor = "white";
+    });
+});
