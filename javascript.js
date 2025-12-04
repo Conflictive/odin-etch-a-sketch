@@ -31,7 +31,7 @@ function generateDivs(amount) {
     }
 }
 
-generateDivs(16);
+generateDivs(70);
 
 // EVENT LISTENERS
 resetBtn.addEventListener("click", () => {
