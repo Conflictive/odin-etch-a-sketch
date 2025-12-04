@@ -17,8 +17,10 @@ function generateDivs(amount) {
             
             gridContainer.appendChild(gridDiv);
 
-            gridDiv.addEventListener("mouseenter", () => {
-                gridDiv.style.backgroundColor = "blue";
+            gridDiv.addEventListener("mouseover", (e) => {
+                if (e.buttons === 1) {
+                    gridDiv.style.backgroundColor = "blue";
+                }
             });
             
         }
@@ -30,8 +32,10 @@ resetBtn.addEventListener("click", () => {
 
     if (userInput > 100) {
         userInput = 100;
-    }
-
+    } else if (userInput > 16) {
+        usedInput = 16;
+    };
+    
     gridContainer.innerHTML = ""
 
     generateDivs(userInput)
