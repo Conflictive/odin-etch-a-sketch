@@ -46,5 +46,4 @@ resetBtn.addEventListener("click", () => {
     gridContainer.innerHTML = ""
 
     generateDivs(userInput)
-    
 });
