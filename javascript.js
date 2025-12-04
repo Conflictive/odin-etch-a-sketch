@@ -6,7 +6,7 @@ const resetBtn = document.querySelector("button");
 // LOGIC
 function generateDivs(amount) {
 
-    dimension = 100 / amount;
+    let dimension = 100 / amount;
 
     for(let i = 0; i < amount; i++){
         for(let j = 0; j < amount; j++) {
@@ -25,7 +25,6 @@ function generateDivs(amount) {
                     gridDiv.style.opacity = currentOpacity + 0.1;
                     gridDiv.style.backgroundColor = "black";
                     }
-                    
                 }
             });
             
@@ -41,7 +40,7 @@ resetBtn.addEventListener("click", () => {
 
     if (userInput > 100) {
         userInput = 100;
-    } else if (userInput > 16) {
+    } else if (userInput < 16) {
         userInput = 16;
     };
 
