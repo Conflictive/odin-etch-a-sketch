@@ -14,6 +14,8 @@ html, body {
     
 .grid-div{
     aspect-ratio: 1/1;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 #btn-container {

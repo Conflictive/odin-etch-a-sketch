@@ -3,6 +3,7 @@
 const gridContainer = document.querySelector("#grid-container");
 const resetBtn = document.querySelector("button");
 
+// LOGIC
 function generateDivs(amount) {
 
     dimension = 100 / amount;
@@ -13,13 +14,18 @@ function generateDivs(amount) {
             gridDiv.classList.add("grid-div");
 
             gridDiv.style.width = `${dimension}%`;
-            gridDiv.style.height = `auto`;
-            
+            gridDiv.style.opacity = 0;
             gridContainer.appendChild(gridDiv);
 
             gridDiv.addEventListener("mouseover", (e) => {
                 if (e.buttons === 1) {
-                    gridDiv.style.backgroundColor = "blue";
+                    let currentOpacity = Number(gridDiv.style.opacity);
+
+                    if (currentOpacity < 1) {
+                    gridDiv.style.opacity = currentOpacity + 0.1;
+                    gridDiv.style.backgroundColor = "black";
+                    }
+                    
                 }
             });
             
@@ -27,19 +33,20 @@ function generateDivs(amount) {
     }
 }
 
+generateDivs(16);
+
+// EVENT LISTENERS
 resetBtn.addEventListener("click", () => {
     let userInput = prompt("Enter the number of squares per side for the new grid (max 100)");
 
     if (userInput > 100) {
         userInput = 100;
     } else if (userInput > 16) {
-        usedInput = 16;
+        userInput = 16;
     };
-    
+
     gridContainer.innerHTML = ""
 
     generateDivs(userInput)
     
 });
-
-generateDivs(16);
