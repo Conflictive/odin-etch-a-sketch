@@ -35,7 +35,7 @@ generateDivs(16);
 
 // EVENT LISTENERS
 resetBtn.addEventListener("click", () => {
-    let userInput = prompt("Enter the number of squares per side for the new grid (max 100)");
+    let userInput = prompt("Enter the number of squares per side for the new grid (select between 16-100)");
 
     if (userInput > 100) {
         userInput = 100;
