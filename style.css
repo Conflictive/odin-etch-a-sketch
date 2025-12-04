@@ -16,3 +16,11 @@ html, body {
     width: 6.25%;
     height: 6.25%;
 }
+
+#btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+}
+
