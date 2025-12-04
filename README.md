@@ -2,7 +2,7 @@
 
 A browser-based sketching pad built as part of **The Odin Project** foundations curriculum. It features a dynamic grid, mouse-drag drawing, and a progressive darkening effect.
 
-**[View Live Demo]()**
+**[View Live Demo](https://conflictive.github.io/odin-etch-a-sketch/)**
 
 ## How to Use
 1.  **Draw:** Click and drag your mouse over the grid to leave a trail.
